@@ -1,26 +1,234 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
+/* ── Custom Theme Tokens ── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ivory: #FAF7F2;
+  --color-champagne: #C9A96E;
+  --color-champagne-light: #D4B880;
+  --color-warm-beige: #F5F0E8;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-light: #2A2A2A;
+  --color-soft-gray: #8A8A8A;
+  --color-warm-white: #FEFCF9;
+  --color-dark-overlay: rgba(0, 0, 0, 0.55);
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #FAF7F2;
+  --foreground: #1A1A1A;
+}
+
+/* ── Base Styles ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* ── Selection ── */
+::selection {
+  background: #C9A96E;
+  color: #1A1A1A;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A96E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8954f;
+}
+
+/* ── Custom Utilities ── */
+.text-balance {
+  text-wrap: balance;
+}
+
+.luxury-gradient {
+  background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 50%, #1A1A1A 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #C9A96E, #E8D5A3, #C9A96E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.line-separator {
+  width: 60px;
+  height: 1px;
+  background: #C9A96E;
+}
+
+.line-separator-wide {
+  width: 120px;
+  height: 1px;
+  background: #C9A96E;
+}
+
+/* ── Horizontal Scroll Gallery ── */
+.gallery-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 2rem;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-scroll-item {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+/* ── Form Styles ── */
+.luxury-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+  padding: 1rem 0;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--foreground);
+  width: 100%;
+  outline: none;
+  transition: border-color 0.4s ease;
+  letter-spacing: 0.02em;
+}
+
+.luxury-input:focus {
+  border-bottom-color: #C9A96E;
+  box-shadow: 0 2px 8px rgba(201, 169, 110, 0.1);
+}
+
+.luxury-input::placeholder {
+  color: #8A8A8A;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* Dark section inputs */
+.dark-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+  padding: 1rem 0;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #FAF7F2;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.4s ease;
+  letter-spacing: 0.02em;
+}
+
+.dark-input:focus {
+  border-bottom-color: #C9A96E;
+  box-shadow: 0 2px 8px rgba(201, 169, 110, 0.15);
+}
+
+.dark-input::placeholder {
+  color: rgba(250, 247, 242, 0.4);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* ── WhatsApp Float ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* ── Media Queries ── */
+@media (max-width: 768px) {
+  .gallery-scroll {
+    gap: 1rem;
+    padding: 1rem;
+  }
 }
