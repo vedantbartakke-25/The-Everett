@@ -2,15 +2,13 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import SectionHeading from "./ui/SectionHeading";
-import CTAButton from "./ui/CTAButton";
 
-const configurations = [
-  "3 Bedroom — ~1,800 sq.ft",
-  "4 Bedroom — ~2,250 sq.ft",
-  "Large 4 Bedroom — ~2,450 sq.ft",
-  "5 Bedroom — ~3,300 sq.ft",
-  "5 Bed Duplex — ~2,800 sq.ft",
+const configOptions = [
+  "3 BHK",
+  "4 BHK",
+  "Large 4 BHK",
+  "5 BHK",
+  "Duplex",
 ];
 
 export default function Contact() {
@@ -21,43 +19,41 @@ export default function Contact() {
     phone: "",
     email: "",
     configuration: "",
-    message: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log("Form submitted:", formData);
   };
 
   return (
     <section
       id="contact"
-      className="relative py-20 md:py-32 lg:py-48 bg-charcoal overflow-hidden"
+      className="relative py-28 md:py-40 lg:py-56 bg-charcoal overflow-hidden scroll-mt-24"
     >
-      {/* Decorative */}
-      <div className="absolute top-0 left-0 w-1/2 h-full opacity-[0.02]">
-        <div className="w-full h-full" style={{
-          backgroundImage: `radial-gradient(circle, rgba(201,169,110,0.4) 1px, transparent 1px)`,
-          backgroundSize: '40px 40px'
-        }} />
+      {/* Subtle Decorative */}
+      <div className="absolute top-0 left-0 w-1/3 h-full opacity-[0.015]">
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage: `radial-gradient(circle, rgba(201,169,110,0.5) 1px, transparent 1px)`,
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       <div
         ref={ref}
         className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
-          
-          {/* Contact Info / Concierge Details */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+          {/* Left — Invitation Text */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -67,21 +63,28 @@ export default function Contact() {
             }}
             className="lg:col-span-5 lg:col-start-2 flex flex-col justify-center"
           >
-            <p className="font-body text-xs tracking-[0.4em] uppercase text-champagne mb-6 md:mb-8">
-              Bespoke Concierge
+            <p className="font-body text-[10px] md:text-xs tracking-[0.4em] uppercase text-champagne mb-6">
+              By Invitation
             </p>
-            <h3 className="font-heading text-4xl md:text-5xl lg:text-6xl text-ivory font-light mb-10 md:mb-12 leading-[1.05] tracking-tight">
-              We Await Your
+            <div className="w-10 h-[1px] bg-champagne/40 mb-8" />
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-7xl text-ivory font-light leading-[1.05] tracking-tight mb-10">
+              Begin Your
               <br />
-              <span className="italic text-champagne">Correspondence</span>
-            </h3>
+              Private{" "}
+              <span className="italic text-champagne">Introduction</span>
+            </h2>
+
+            <p className="font-body text-sm md:text-base text-ivory/45 font-light leading-[2] tracking-wide mb-14 max-w-md">
+              A private preview awaits. Share your details, and our concierge
+              team will curate a personal introduction to The Everett.
+            </p>
 
             <div className="space-y-10">
               <div>
-                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-ivory/40 mb-3">
-                  The Gallery
+                <p className="font-body text-[9px] tracking-[0.3em] uppercase text-ivory/30 mb-3">
+                  Experience Centre
                 </p>
-                <p className="font-body text-sm md:text-base text-ivory/70 font-light tracking-wide leading-relaxed">
+                <p className="font-body text-sm text-ivory/60 font-light tracking-wide leading-relaxed">
                   The Everett Experience Centre
                   <br />
                   Lullanagar, Pune 411040
@@ -89,100 +92,92 @@ export default function Contact() {
               </div>
 
               <div>
-                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-ivory/40 mb-3">
+                <p className="font-body text-[9px] tracking-[0.3em] uppercase text-ivory/30 mb-3">
                   Direct Line
                 </p>
                 <a
                   href="tel:+919999999999"
-                  className="font-body text-sm md:text-base text-ivory/70 font-light tracking-wide hover:text-champagne transition-colors duration-500"
+                  className="font-body text-sm text-ivory/60 font-light tracking-wide hover:text-champagne transition-colors duration-500"
                 >
                   +91 99999 99999
                 </a>
               </div>
 
               <div>
-                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-ivory/40 mb-3">
-                  Digital
-                </p>
-                <a
-                  href="mailto:enquire@theeverett.in"
-                  className="font-body text-sm md:text-base text-ivory/70 font-light tracking-wide hover:text-champagne transition-colors duration-500"
-                >
-                  enquire@theeverett.in
-                </a>
-              </div>
-
-              <div>
-                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-ivory/40 mb-3">
+                <p className="font-body text-[9px] tracking-[0.3em] uppercase text-ivory/30 mb-3">
                   Viewing
                 </p>
-                <p className="font-body text-sm md:text-base text-ivory/70 font-light tracking-wide">
+                <p className="font-body text-sm text-ivory/60 font-light tracking-wide">
                   Strictly by private appointment
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Minimal Form */}
+          {/* Right — Minimal Elegant Form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.4, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-5 space-y-12 lg:pt-12"
+            transition={{
+              duration: 1.4,
+              delay: 0.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="lg:col-span-4 lg:col-start-8 space-y-0 lg:pt-16"
           >
-            <div className="relative border-b border-ivory/20 focus-within:border-champagne transition-colors duration-700">
+            <div className="border-b border-ivory/[0.15] focus-within:border-champagne transition-colors duration-500">
               <input
                 type="text"
                 name="name"
-                placeholder="Name"
+                placeholder="Full Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full bg-transparent py-4 text-ivory font-light text-lg md:text-xl placeholder:text-ivory/30 focus:outline-none"
+                className="w-full bg-transparent py-5 text-ivory font-light text-base md:text-lg placeholder:text-ivory/35 placeholder:text-xs placeholder:tracking-[0.15em] placeholder:uppercase focus:outline-none font-body"
                 required
               />
             </div>
 
-            <div className="relative border-b border-ivory/20 focus-within:border-champagne transition-colors duration-700">
+            <div className="border-b border-ivory/[0.15] focus-within:border-champagne transition-colors duration-500">
               <input
                 type="tel"
                 name="phone"
-                placeholder="Phone"
+                placeholder="Mobile Number"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full bg-transparent py-4 text-ivory font-light text-lg md:text-xl placeholder:text-ivory/30 focus:outline-none"
+                className="w-full bg-transparent py-5 text-ivory font-light text-base md:text-lg placeholder:text-ivory/35 placeholder:text-xs placeholder:tracking-[0.15em] placeholder:uppercase focus:outline-none font-body"
                 required
               />
             </div>
 
-            <div className="relative border-b border-ivory/20 focus-within:border-champagne transition-colors duration-700">
+            <div className="border-b border-ivory/[0.15] focus-within:border-champagne transition-colors duration-500">
               <input
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder="Email Address"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full bg-transparent py-4 text-ivory font-light text-lg md:text-xl placeholder:text-ivory/30 focus:outline-none"
+                className="w-full bg-transparent py-5 text-ivory font-light text-base md:text-lg placeholder:text-ivory/35 placeholder:text-xs placeholder:tracking-[0.15em] placeholder:uppercase focus:outline-none font-body"
                 required
               />
             </div>
 
-            <div className="relative border-b border-ivory/20 focus-within:border-champagne transition-colors duration-700">
+            <div className="border-b border-ivory/[0.15] focus-within:border-champagne transition-colors duration-500">
               <select
                 name="configuration"
                 value={formData.configuration}
                 onChange={handleChange}
-                className="w-full bg-transparent py-4 text-ivory/80 font-light text-lg md:text-xl focus:outline-none appearance-none cursor-pointer"
+                className="w-full bg-transparent py-5 text-ivory/70 font-light text-base md:text-lg focus:outline-none appearance-none cursor-pointer font-body"
                 style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23C9A96E' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'right 0 center',
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23C9A96E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right 4px center",
                 }}
               >
-                <option value="" className="bg-charcoal text-ivory/40">
-                  Interest
+                <option value="" className="bg-charcoal text-ivory/50">
+                  Select Configuration
                 </option>
-                {configurations.map((config) => (
+                {configOptions.map((config) => (
                   <option
                     key={config}
                     value={config}
@@ -194,17 +189,15 @@ export default function Contact() {
               </select>
             </div>
 
-            <div className="pt-8">
+            <div className="pt-10">
               <button
                 type="submit"
-                className="group relative inline-flex items-center gap-6 text-champagne hover:text-ivory transition-colors duration-700"
+                className="bg-champagne text-charcoal px-10 py-4 font-body text-[10px] md:text-xs tracking-[0.2em] uppercase transition-all duration-500 hover:bg-champagne-light hover:shadow-lg hover:shadow-champagne/20 hover:-translate-y-0.5 cursor-pointer"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase">Submit Inquiry</span>
-                <span className="w-12 h-[1px] bg-champagne group-hover:bg-ivory group-hover:w-16 transition-all duration-700 ease-[0.22,1,0.36,1]" />
+                Enquire Now
               </button>
             </div>
           </motion.form>
-
         </div>
       </div>
     </section>

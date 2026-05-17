@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Everett — Ultra-Premium Residences in Lullanagar, Pune",
+  title: "The Everett — A Quiet Masterpiece in Lullanagar, Pune",
   description:
-    "Iconic. Peerless. Timeless. Trophy ultra-premium 3, 4 & 5-bedroom residences in Lullanagar, Pune. Two 29-storey towers across 3.63 acres. Starting ₹4 Cr.",
+    "Ultra-premium 3, 4 & 5-bedroom residences in Lullanagar, Pune. Rising ~370 feet across 31 levels — the defining tower of this micro-market. Trophy living, redefined.",
   keywords:
-    "luxury residences pune, ultra premium apartments lullanagar, the everett pune, 5 bedroom apartments pune, luxury real estate pune",
+    "the everett pune, luxury residences lullanagar, ultra premium apartments pune, 5 bedroom apartments pune, luxury real estate pune, tribeca developers",
   openGraph: {
-    title: "The Everett — Ultra-Premium Residences in Lullanagar, Pune",
+    title: "The Everett — A Quiet Masterpiece in Lullanagar, Pune",
     description:
-      "Trophy ultra-premium residences in Lullanagar, Pune. Two 29-storey towers across 3.63 acres.",
+      "Ultra-premium residences in Lullanagar, Pune. Rising ~370 feet across 31 levels — trophy living, redefined.",
     type: "website",
     locale: "en_IN",
   },
@@ -39,7 +39,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <SmoothScroll>
-          <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.015] mix-blend-overlay"
+          <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.012] mix-blend-overlay"
                style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}
           />
           {children}

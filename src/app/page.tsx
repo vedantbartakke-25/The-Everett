@@ -2,29 +2,33 @@
 
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import DeveloperLegacy from "@/components/DeveloperLegacy";
-import AboutEverett from "@/components/AboutEverett";
-import Configurations from "@/components/Configurations";
-import Amenities from "@/components/Amenities";
-import Location from "@/components/Location";
-import Gallery from "@/components/Gallery";
-import EOISection from "@/components/EOISection";
+import Philosophy from "@/components/Philosophy";
+import ArrivalExperience from "@/components/ArrivalExperience";
+import DoubleHeightLiving from "@/components/DoubleHeightLiving";
+import Residences from "@/components/Residences";
+import CuratedLifestyle from "@/components/CuratedLifestyle";
+import SanctuaryWithin from "@/components/SanctuaryWithin";
+import PrivateSanctuary from "@/components/PrivateSanctuary";
+import LocationSection from "@/components/LocationSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import EntryModal from "@/components/EntryModal";
 
 export default function Home() {
   return (
     <main className="relative">
+      <EntryModal />
       <Navbar />
       <Hero />
-      <DeveloperLegacy />
-      <AboutEverett />
-      <Configurations />
-      <Amenities />
-      <Location />
-      <Gallery />
-      <EOISection />
+      <Philosophy />
+      <ArrivalExperience />
+      <DoubleHeightLiving />
+      <Residences />
+      <CuratedLifestyle />
+      <SanctuaryWithin />
+      <PrivateSanctuary />
+      <LocationSection />
       <Contact />
       <Footer />
       <FloatingCTA />

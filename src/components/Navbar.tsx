@@ -2,14 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
-  { label: "Legacy", href: "#legacy" },
-  { label: "Residences", href: "#about" },
-  { label: "Configurations", href: "#configurations" },
+  { label: "Philosophy", href: "#philosophy" },
+  { label: "Residences", href: "#configurations" },
   { label: "Lifestyle", href: "#amenities" },
   { label: "Location", href: "#location" },
-  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -41,11 +40,11 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled
             ? "bg-charcoal/90 backdrop-blur-xl shadow-lg shadow-black/10"
-            : "bg-transparent"
+            : "bg-gradient-to-b from-charcoal/80 via-charcoal/40 to-transparent"
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16">
@@ -53,9 +52,19 @@ export default function Navbar() {
             {/* Logo */}
             <a
               href="#hero"
-              className="font-heading text-2xl md:text-3xl text-ivory tracking-[0.05em] font-light"
+              className="flex items-center gap-3 md:gap-4 group"
             >
-              The <span className="text-champagne">Everett</span>
+              <div className="relative w-9 h-12 md:w-12 md:h-16 transition-transform duration-500 group-hover:scale-105 flex-shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="The Everett Logo"
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
+              <span className="font-heading text-2xl md:text-3xl text-ivory tracking-[0.05em] font-light hidden sm:block">
+                The <span className="text-champagne group-hover:text-ivory transition-colors duration-500">Everett</span>
+              </span>
             </a>
 
             {/* Desktop Nav */}
@@ -64,20 +73,12 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-body text-[11px] tracking-[0.2em] uppercase text-ivory/70 hover:text-champagne transition-colors duration-400"
+                  className="font-body text-[11px] tracking-[0.2em] uppercase text-ivory/70 font-light hover:text-champagne transition-colors duration-500"
                 >
                   {link.label}
                 </a>
               ))}
             </div>
-
-            {/* Desktop CTA */}
-            <a
-              href="#contact"
-              className="hidden lg:inline-flex font-body text-[10px] tracking-[0.2em] uppercase bg-champagne text-charcoal px-6 py-3 hover:bg-champagne-light transition-all duration-400"
-            >
-              Private Preview
-            </a>
 
             {/* Mobile Menu Button */}
             <button
@@ -130,17 +131,6 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
-
-              <motion.a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                className="mt-8 font-body text-xs tracking-[0.2em] uppercase bg-champagne text-charcoal px-10 py-4"
-              >
-                Schedule Private Preview
-              </motion.a>
             </div>
           </motion.div>
         )}
