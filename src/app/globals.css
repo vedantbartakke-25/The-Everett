@@ -439,3 +439,23 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.15em;
   }
 }
+
+/* ── Section Spacing Force (Residences & Lifestyle) ── */
+#configurations, #amenities {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+@media (min-width: 768px) {
+  #configurations, #amenities {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #configurations, #amenities {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+}

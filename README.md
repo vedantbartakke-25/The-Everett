@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Everett
 
-## Getting Started
+A professional luxury real estate platform built for "The Everett" – ultra-premium residences in Lullanagar, Pune.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Email Delivery:** [Resend](https://resend.com/)
+- **Language:** TypeScript
+
+## Features
+
+- **Luxury UI/UX:** High-end, premium minimal design tailored for luxury real estate.
+- **Smooth Animations:** Integrated page transitions and reveal animations using Framer Motion.
+- **Professional Lead Capture:** Connects both popup and inline forms directly to email via the Resend API.
+- **Local Backup Strategy:** Form submissions are seamlessly backed up to a lightweight local `.csv` file.
+- **Vercel Ready:** Fully optimized for instantaneous deployments on the Vercel edge network.
+
+## Local Development
+
+First, ensure dependencies are installed:
+
+```bash
+npm install
+```
+
+Next, configure the environment variables by creating a `.env.local` file:
+
+```env
+RESEND_API_KEY=your_resend_api_key_here
+CLIENT_EMAIL=your_email@example.com
+```
+
+Finally, start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is optimized for deployment on [Vercel](https://vercel.com).
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push this repository to GitHub.
+2. Import the project on your Vercel Dashboard.
+3. Add the Environment Variables (`RESEND_API_KEY`, `CLIENT_EMAIL`) in the Vercel project settings.
+4. Deploy. Vercel will automatically detect the Next.js framework and configure the build settings.

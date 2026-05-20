@@ -89,7 +89,7 @@ export default function Residences() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16 md:mb-24"
         >
-          <p className="font-body text-[10px] md:text-xs tracking-[0.4em] uppercase text-champagne mb-6">
+          <p className="font-body text-[10px] md:text-[20px] tracking-[0.4em] uppercase text-champagne mb-6">
             The Residences
           </p>
           <div className="w-10 h-[1px] bg-champagne/40 mb-8" />
@@ -142,7 +142,7 @@ export default function Residences() {
 
               {/* Area — Hero size */}
               <div className="mb-10 lg:mb-14">
-                <span className="font-heading text-7xl md:text-8xl lg:text-[9rem] text-ivory font-light tracking-tight leading-none">
+                <span className="font-heading text-4xl md:text-5xl lg:text-[5em] text-ivory font-light tracking-tight leading-none">
                   {active.area}
                 </span>
                 <span className="font-body text-xs text-ivory/30 ml-4 tracking-[0.2em] uppercase">
@@ -161,7 +161,7 @@ export default function Residences() {
                   <p className="font-body text-[9px] tracking-[0.3em] uppercase text-ivory/30 mb-3 group-hover:text-champagne transition-colors duration-400">
                     Pricing
                   </p>
-                  <p className="font-heading text-4xl md:text-5xl text-ivory font-light tracking-tight group-hover:text-champagne transition-colors duration-400">
+                  <p className="font-heading text-xl md:text-2xl mb-[20px] text-ivory font-light tracking-tight group-hover:text-champagne transition-colors duration-400">
                     Pricing Available Upon Request
                   </p>
                 </a>

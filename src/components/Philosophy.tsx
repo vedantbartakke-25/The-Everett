@@ -24,7 +24,7 @@ export default function Philosophy() {
         {/* Section Header — Left aligned, editorial */}
         <div className="mb-20 md:mb-32 lg:mb-40">
           <RevealAnimation delay={0}>
-            <p className="font-body text-[10px] md:text-xs tracking-[0.4em] uppercase text-champagne mb-6">
+            <p className="font-body text-[10px] md:text-[20px] tracking-[0.4em] uppercase text-champagne mb-6">
               The Everett Philosophy
             </p>
           </RevealAnimation>

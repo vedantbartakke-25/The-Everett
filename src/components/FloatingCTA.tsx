@@ -18,7 +18,7 @@ export default function FloatingCTA() {
     <>
       {/* WhatsApp Float — Muted Luxury */}
       <motion.a
-        href="https://wa.me/919999999999?text=I%20am%20interested%20in%20The%20Everett"
+        href="https://wa.me/918275941654?text=I%20am%20interested%20in%20The%20Everett"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"
