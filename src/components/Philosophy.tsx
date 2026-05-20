@@ -20,7 +20,7 @@ export default function Philosophy() {
       ref={sectionRef}
       className="relative py-32 md:py-44 lg:py-56 bg-ivory overflow-hidden scroll-mt-24"
     >
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16">
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
         {/* Section Header — Left aligned, editorial */}
         <div className="mb-20 md:mb-32 lg:mb-40">
           <RevealAnimation delay={0}>

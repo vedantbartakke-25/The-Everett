@@ -38,7 +38,7 @@ export default function DoubleHeightLiving() {
       </div>
 
       {/* Editorial Text Block */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-36">
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-20 md:py-28 lg:py-36">
         <div className="max-w-3xl mx-auto text-center">
           <RevealAnimation delay={0}>
             <p className="font-body text-[10px] md:text-xs tracking-[0.4em] uppercase text-champagne mb-6">

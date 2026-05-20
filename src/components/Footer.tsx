@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-charcoal border-t border-ivory/[0.04]">
       {/* Main Footer */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-16 md:py-24">
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand */}
           <RevealAnimation delay={0}>
@@ -91,7 +91,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-ivory/[0.04]">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-6">
+        <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-body text-[10px] text-ivory/25 tracking-wider">
               © 2026 The Everett. All rights reserved.

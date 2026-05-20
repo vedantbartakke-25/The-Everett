@@ -31,7 +31,7 @@ export default function ArrivalExperience() {
       </div>
 
       {/* Text below image — Editorial layout */}
-      <div className="relative max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-36">
+      <div className="relative max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-20 md:py-28 lg:py-36">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           <div className="lg:col-span-5 lg:col-start-2">
             <RevealAnimation delay={0}>

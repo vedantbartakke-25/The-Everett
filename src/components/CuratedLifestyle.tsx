@@ -42,7 +42,7 @@ export default function CuratedLifestyle() {
       className="relative py-32 md:py-44 lg:py-56 bg-ivory overflow-hidden scroll-mt-24"
     >
       {/* Section Header */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 pb-16 md:pb-24">
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 pb-16 md:pb-24">
         <RevealAnimation delay={0}>
           <p className="font-body text-[10px] md:text-[20px]  tracking-[0.4em] uppercase text-champagne mb-6">
             The Lifestyle
@@ -67,7 +67,7 @@ export default function CuratedLifestyle() {
       </div>
 
       {/* Immersive Experience Blocks */}
-      <div className="space-y-24 md:space-y-40 max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16">
+      <div className="space-y-24 md:space-y-40 max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
         {experiences.map((exp, index) => {
           const isEven = index % 2 === 0;
           return (

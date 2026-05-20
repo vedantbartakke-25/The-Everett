@@ -36,7 +36,7 @@ export default function LocationSection() {
 
       <div
         ref={ref}
-        className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16"
+        className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left — Header + Description + Landmarks */}

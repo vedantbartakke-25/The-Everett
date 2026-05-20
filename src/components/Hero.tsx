@@ -41,7 +41,7 @@ export default function Hero() {
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-10 h-full flex flex-col justify-center items-center text-center pb-32 px-6 md:px-12 lg:px-16 max-w-[1440px] mx-auto"
+        className="relative z-10 h-full flex flex-col justify-center items-center text-center pb-32 px-8 md:px-12 lg:px-20 max-w-[1440px] mx-auto"
       >
         {/* Main Headline */}
         <div className="overflow-hidden mb-6">
