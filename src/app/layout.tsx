@@ -7,7 +7,10 @@ export const metadata: Metadata = {
     "Ultra-premium 3, 4 & 5-bedroom residences in Lullanagar, Pune. Rising ~370 feet across 31 levels — the defining tower of this micro-market. Trophy living, redefined.",
   keywords:
     "the everett pune, luxury residences lullanagar, ultra premium apartments pune, 5 bedroom apartments pune, luxury real estate pune, tribeca developers",
-  openGraph: {
+    verification: {
+    google: "PUd7H1wq1W2Z4LWfDF6gbCEeVq9TuQ4LposgCwPC1oc",
+  },
+    openGraph: {
     title: "The Everett — A Quiet Masterpiece in Lullanagar, Pune",
     description:
       "Ultra-premium residences in Lullanagar, Pune. Rising ~370 feet across 31 levels — trophy living, redefined.",
