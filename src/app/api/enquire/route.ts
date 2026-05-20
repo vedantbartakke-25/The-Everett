@@ -64,7 +64,7 @@ export async function POST(req: Request) {
 
       try {
         await resend.emails.send({
-          from: "The Everett <onboarding@resend.dev>", // Typically you'd use a verified domain here like leads@theeverett.in
+          from: "The Everett <info@tribeca-theeverett-lullanagar.com>", // Typically you'd use a verified domain here like leads@theeverett.in
           to: clientEmail,
           subject: "New Everett Enquiry",
           html: emailHtml,
