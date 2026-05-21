@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   },
 };
 
+import type { Viewport } from "next";
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 import SmoothScroll from "@/components/SmoothScroll";
 
 export default function RootLayout({

@@ -34,6 +34,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -41,6 +43,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-body);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 /* ── Typography ── */
