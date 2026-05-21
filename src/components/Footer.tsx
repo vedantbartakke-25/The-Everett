@@ -76,10 +76,10 @@ export default function Footer() {
                   +91 84118 28897
                 </a>
                 <a
-                  href="mailto:BuilderLobby1@gmail.com"
+                  href="mailto:builderlobby1@gmail.com"
                   className="block font-body text-xs text-ivory/35 hover:text-champagne transition-colors duration-400 tracking-wide"
                 >
-                  BuilderLobby1@gmail.com
+                  builderlobby1@gmail.com
                 </a>
               </div>
             </div>

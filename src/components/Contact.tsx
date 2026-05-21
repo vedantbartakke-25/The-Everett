@@ -140,6 +140,18 @@ export default function Contact() {
 
               <div>
                 <p className="font-body text-[9px] tracking-[0.3em] uppercase text-ivory/30 mb-3">
+                  Email
+                </p>
+                <a
+                  href="mailto:builderlobby1@gmail.com"
+                  className="font-body text-sm text-ivory/60 font-light tracking-wide hover:text-champagne transition-colors duration-500"
+                >
+                  builderlobby1@gmail.com
+                </a>
+              </div>
+
+              <div>
+                <p className="font-body text-[9px] tracking-[0.3em] uppercase text-ivory/30 mb-3">
                   Viewing
                 </p>
                 <p className="font-body text-sm text-ivory/60 font-light tracking-wide">

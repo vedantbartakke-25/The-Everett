@@ -210,6 +210,96 @@ export default function Residences() {
             </div>
           </motion.div>
         </AnimatePresence>
+
+        {/* ── Premium Retail Shops ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="border-t border-ivory/[0.06]"
+          style={{ marginTop: "160px"}}
+        >
+          {/* Section Label */}
+          <p className="font-body text-[10px] md:text-[20px] tracking-[0.4em] uppercase text-champagne mb-6">
+            Commercial Spaces
+          </p>
+          <div className="w-10 h-[1px] bg-champagne/40 mb-8" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+            {/* Left — Title & Pricing */}
+            <div className="lg:col-span-6">
+              <h3 className="font-heading text-4xl md:text-5xl lg:text-7xl text-ivory font-light leading-[1.05] tracking-tight mb-10">
+                Premium
+                <br />
+                <span className="italic text-champagne">Retail Shops</span>
+              </h3>
+
+              <div className="w-16 h-[1px] bg-champagne/30 mb-10" />
+
+              <a
+                href="#contact"
+                className="inline-block group"
+              >
+                <p className="font-body text-[9px] tracking-[0.3em] uppercase text-ivory/30 mb-3 group-hover:text-champagne transition-colors duration-400">
+                  Pricing
+                </p>
+                <p className="font-heading text-xl md:text-2xl text-ivory font-light tracking-tight group-hover:text-champagne transition-colors duration-400">
+                  Exclusive Commercial Pricing On Request
+                </p>
+              </a>
+            </div>
+
+            {/* Right — Highlights + CTA */}
+            <div className="lg:col-span-4 lg:col-start-9 lg:pt-12">
+              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-ivory/30 mb-8">
+                Key Advantages
+              </p>
+              <div className="space-y-6">
+                {[
+                  "High Street Retail Experience",
+                  "Prime Lullanagar Location",
+                  "High Visibility Frontage",
+                  "Luxury Catchment Audience",
+                  "Limited Inventory",
+                ].map((highlight, i) => (
+                  <motion.div
+                    key={highlight}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.8,
+                      delay: i * 0.1,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="flex items-center gap-5"
+                  >
+                    <div className="w-5 h-[1px] bg-champagne/30" />
+                    <span className="font-body text-sm text-ivory/60 tracking-wider font-light">
+                      {highlight}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <motion.a
+                href="#contact"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="inline-flex items-center gap-4 mt-14 group"
+              >
+                <span className="font-body text-[10px] tracking-[0.25em] uppercase text-champagne group-hover:text-ivory transition-colors duration-600">
+                  Enquire Now
+                </span>
+                <span className="w-8 h-[1px] bg-champagne group-hover:w-12 group-hover:bg-ivory transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+              </motion.a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
