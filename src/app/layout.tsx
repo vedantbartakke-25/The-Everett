@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Everett — A Quiet Masterpiece in Lullanagar, Pune",
+  title: "The Everett Pune | Luxury 3, 4 & 5 BHK Homes & Retail Spaces in Lullanagar",
   description:
-    "Ultra-premium 3, 4 & 5-bedroom residences in Lullanagar, Pune. Rising ~370 feet across 31 levels — the defining tower of this micro-market. Trophy living, redefined.",
+  "Discover The Everett in Lullanagar, Pune — a landmark destination featuring ultra-premium 3, 4 & 5 BHK luxury residences and curated retail spaces. Rising ~370 feet across 31 levels, The Everett blends expansive layouts, double-height living, lifestyle amenities, and panoramic city views.",
   keywords:
-    "the everett pune, luxury residences lullanagar, ultra premium apartments pune, 5 bedroom apartments pune, luxury real estate pune, tribeca developers",
+  "The Everett Pune, The Everett Lullanagar, luxury residences Pune, luxury apartments Lullanagar, ultra premium homes Pune, retail shops Lullanagar Pune, luxury retail spaces Pune, 3 BHK luxury apartments Pune, 4 BHK residences Pune, 5 BHK luxury homes Pune, premium real estate Pune, luxury property Lullanagar",
     verification: {
     google: "PUd7H1wq1W2Z4LWfDF6gbCEeVq9TuQ4LposgCwPC1oc",
   },
